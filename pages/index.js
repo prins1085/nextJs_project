@@ -20,7 +20,7 @@ export default function Home() {
         ></meta>
       </Head>
       <Navbar />
-      <div>Hello World!</div>
+      <div className="text-center text-3xl p-20">Home Page</div>
     </>
   );
 }
