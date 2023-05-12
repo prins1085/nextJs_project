@@ -4,12 +4,13 @@ import Navbar from "./Navbar";
 export async function getStaticProps() {
   console.log("Revalidate page");
   // const res = await fetch("http://localhost:4000/products");
-  const res = await import("data.json");
-  const posts = await res.json();
-
+  // const posts = await res.json();
+  
+  const { products } = await import('data.json');
+  
   return {
     props: {
-      posts,
+      posts:products,
     },
     revalidate:10,
   };
